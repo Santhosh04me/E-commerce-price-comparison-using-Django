@@ -1,0 +1,195 @@
+/* Reset some default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the topbar */
+#topbar {
+    background-color: #1f1f1f;
+    height: 20px;
+    width: 100%;
+}
+
+
+/* Apply styles to the heading */
+.heading {
+    float: left;
+    background-color: #f00b0b;
+    height: 20px;
+    width: 50%;
+    padding: 20px;
+    text-align: justify;
+    color: #fff;
+    overflow: hidden; /* Prevent text from overflowing */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+}
+
+
+/* Apply styles to the body */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif; /* Added a default font-family */
+}
+
+/* Apply styles to the container */
+#container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+}
+
+/* Apply styles to the header and navigation links */
+#header {
+    background-color: #1f1f1f; /* Background color for the header */
+}
+
+/* Apply styles to the header and navigation links */
+#header ul {
+    float: right;
+    margin-top: 4px;
+    margin-right: 0px;
+    list-style: none; /* Remove list bullets */
+    vertical-align: top; /* Align list items to the top */
+}
+
+#header ul li {
+    display: inline;
+    margin-right: 20px;
+    vertical-align: top; /* Align list items to the top */
+}
+
+
+
+#header ul li a {
+    color: #440876;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px; /* Add some padding to the links */
+    border-radius: 3px; /* Add rounded corners to the links */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth hover transition */
+}
+
+/* Style for the active menu item */
+#header ul li.active a {
+    background-color: #767608;
+    color: #fff;
+}
+
+/* Apply styles to the dropdown select */
+#header select {
+    background-color: #1f1f1f;
+    color: #fff;
+    border: none;
+    padding: 5px; /* Add some padding to the select */
+}
+
+/* Add hover effect to navigation links */
+#header ul li a:hover {
+    background-color: #440876;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+}
+
+
+/* Apply styles to the dropdown select */
+#header select {
+    background-color: #1f1f1f; /* Background color for the dropdown */
+    color: #fff; /* Text color for the dropdown */
+    border: none; /* Remove the border */
+}
+
+/* Apply styles to the jumbotron */
+.jumbotron {
+    border: 2px solid#0673d2;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 25px;
+
+}
+
+/* Apply styles to the search form */
+.form-inline {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-inline input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-inline .btn {
+    background-color: #440876;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+/* Apply styles to the image section */
+.img_sec {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Apply styles to individual cards (flipkart and amazon) */
+#flipkart, #amazon {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Added a background color for the cards */
+    text-align: center;
+}
+
+#flipkart img, #amazon img {
+    max-width: 100%;
+}
+
+/* Apply styles to the footer */
+/* Style the footer container */
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif; /* Font family for the footer text */
+    display: flex; /* Use flexbox to arrange the content */
+    justify-content: space-between; /* Space between the two sections */
+}
+
+/* Style the left section */
+.footer-left {
+    text-align: left;
+    flex-grow: 1; /* Allow this section to grow */
+}
+
+/* Style the right section */
+.footer-right {
+    text-align: right;
+    flex-shrink: 0; /* Prevent this section from shrinking */
+}
+
+/* Style the copyright section in the right section */
+.footer-right .CopyrighFooter {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #f00b0b;
+    list-style: none;
+}
+
+.footer-right .CopyrighFooter a {
+    color: #f00b0b; /* Change link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Add hover effect to navigation links */
+#header ul li a:hover {
+    color: #f00b0b;
+}

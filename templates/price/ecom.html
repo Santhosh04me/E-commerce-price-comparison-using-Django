@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  {%load static%}
+     <title>simple web site</title>
+     <link rel="stylesheet" href="{% static 'css/ecom.css' %}">
+     </head>
+<div id="topbar" ></div>
+<!--Navbar-->
+<nav class="">
+
+    
+    <div class="heading" href="#"><span><h1> Price Comparison website </h1></span></div>
+    <!-- Collapsible content -->
+    <div id="container">
+    <div id="header">
+      <!-- Links -->
+    <ul >
+        <li class="nav-item active"><a class="nav-link" href="#">Home</span></a></li>
+        <li class="nav-item active"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item active"><a class="nav-link" href="#">Features</a></li>
+        <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
+    
+        <!-- Dropdown -->
+        <select>
+        <li >
+          <a>Dropdown</a>
+        <div class="Dropdown">
+            <option value="Dropdown"><a class="dropdown-item"  href="#">Mobile</a></option>
+            <option><a class="dropdown-item" href="#">Laptop</a></option>
+          <option> <a class="dropdown-item" href="#">Pc</a></option>
+        </div>
+        </li></select>
+        <form class="form-inline">
+          
+        </form>
+    </div>
+    </div>
+    </ul>
+    </div>
+    </nav>
+    <!--/.Navbar-->
+    <br><br>
+    
+    <div class="jumbotron jumbotron-fluid">
+    <div class="">
+      <h1>Ecommerce Price Comparison website Using Web Scrapping</h1>      
+      <p>Price Comparison Tool : Here you can compare prices of a product on various e-commerce platforms..</p>
+    </div>
+    </div>
+    
+    <br><br>
+    <form method="GET" action="{% url 'search_results' %}" class="form-inline">
+      <input type="text" name="search_text" placeholder="Enter your search text" size="80px">
+      <input type="submit" value="Search">
+    </form>
+    
+    
+<section class="img_sec"> 
+  <div id="flipkart">
+            <!------------------Card image---------------->
+          <div class="view">
+              <img class="card-img-top" src=" {%static 'images/flp.jpg'%} " alt="flipkarts">
+              <a href="#!"><div class="mask rgba-white-slight"></div></a>
+          </div>
+            <!---------------Card image-End---------------->
+    
+            <!----------------Card content-------------->
+          <div class="flip-type">
+              <!--Title-->
+              <a><h4 class="card-title">flipkart.com</h4></a>
+              <a class="card-meta">Search Results</a>
+              <p class="card-text"></p>
+              <div>
+                {% if flipkart_results %}
+                {%for f in flipkart_results  %}
+                   {{f|safe}}
+                   {%endfor%}
+                  {% else %}
+                      <p>No Flipkart  found.
+                        <br>
+                sorry we could not find anything
+                !!!<br>
+                Try Again!
+                      </p>
+                  {% endif %}
+
+              </div>
+                <button type="button" class="btn btn-primary"><a href="https://www.flipkart.com" id="visitsite">Visit Flipkart</a></button>
+          </div>
+        <!--Card content-->
+  </div>
+      <!-----------------------------flilpkart-End------------------------------------------>
+      <!-----------------------------Amazon start------------------------------------------>
+     
+  <div id="amazon">
+        <!---------------Card image---------------------------->
+        <div class="view">
+          <img class="card-img-top" src="{% static 'images/amz.png'%} " alt="Amazons">
+          <a href="#!"><div class="mask rgba-white-slight"></div></a>
+        </div>
+      
+
+        <!--------------------Card content---------------------------->
+        <div class="amz-title">
+          <a><h4 class="card-title">amazon.com</h4></a>
+          <div id="amazon-results">
+            <a class="card-meta">Search Results</a>
+            <div>
+              {% if amazon_results %}
+              {%for az in amazon_results  %}
+              {{az|safe}}
+              {%endfor%}
+                  {% else %}
+                      <p>No Flipkart  found.
+                        <br>
+                sorry we could not find anythingssss
+                !!!<br>
+                Try Again!
+                      </p>
+                  {% endif %}
+            </div>
+  
+      <!-----------------------Text-------------------------->
+            <p class="card-text"></p>
+            <hr>
+           <button type="button" class="btn btn-primary"><a href="https://www.amazon.com" id="visitsite">Visit amazon</a></button>
+           </div></div>
+  </div>        
+  </section>
+
+</body>
+  <!---------------------------amazon-End------------------------------>
+
+
+
+
+
+
+            
+  <footer>
+    <!-- Left Section -->
+    <div class="left-section">
+        <h5 class="text-uppercase">Price Comparison Tool</h5>
+        <p>Here you can compare prices of a product on various e-commerce platforms.</p>
+        <!-- E-commerce sites links -->
+        <h5 class="text-uppercase">E-commerce sites</h5>
+        <ul class="list-unstyled">
+            <li><a href="#!">Amazon</a></li>
+            <li><a href="#!">Flipkart</a></li>
+        </ul>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+        <ul class="link_list">
+            <li><a href="#!">amazon.com</a></li>
+            <li><a href="#!">flipkart.com</a></li>
+        </ul>
+        <!-- Copyright -->
+        <div class="CopyrighFooter">© 2023 Copyright: <a href="">santhosh04me@gmail.com</a></div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+   
+        
+
+
+
+
+        </body>
+        </html>
